@@ -9,3 +9,4 @@ hrApp.controller('MainController', ['$scope', function($scope) {
     };
 
 }]);
+
