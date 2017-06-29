@@ -12,6 +12,7 @@
         <th class="col-lg-2 text-center">Manager</th>
         <th>Department</th>
         <!--TODO #HR4 add Actions column-->
+        <th>View</th>
         <th class="col-lg-3 text-center">Actions</th>
     </tr>
     <tr ng-repeat="employee in employees">
@@ -49,6 +50,9 @@
             {{employee.departmentId.departmentName}}
         </td>
         <!--TODO #HR5 add View button-->
+        <td class="btn-default" role="button" ng-click="viewEmployee(employee.employeeId)">
+            View
+        </td>
 
     </tr>
 </table>

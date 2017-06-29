@@ -1,0 +1,70 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+
+    </div>
+    <div class="panel-body">
+
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="firstName">First Name:</label>
+                    <input id="firstName" class="form-control" type="text" ng-model="user.firstName"></input>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="lastName">Last Name:</label>
+                    <input id="lastName" class="form-control" type="text" ng-model="user.lastName"></input>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="id">Id:</label>
+                    <input id="id" class="form-control" type="number" ng-model="user.id"></input>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="age">Age:</label>
+                    <input id="age" class="form-control" type="number" ng-model="user.age"></input>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-5"></div>
+            <div class="col-md-7">
+                <div class="container">
+                    <button class="btn btn-default" ng-click="back()">Back</button>
+                    <button class="btn btn-default" ng-click="reset()">Reset</button>
+                    <button class="btn btn-default" ng-click="save()">Save</button>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="container">
+                <div class="jumbotron" ng-hide="tableShow">
+
+                        <table class="table-bordered">
+                            <tr>
+                                <th> First name</th>
+                            </tr >
+                            <tr ng-repeat="us in listUsers">
+                            <td> {{us.firstName}}</td>
+                            </tr>
+
+                        </table>
+
+                </div>
+                <p>
+                    <a class="btn btn-primary btn-lg" role="button" ng-click="show()">Show/Hide
+                        Employee List</a>
+                </p>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
