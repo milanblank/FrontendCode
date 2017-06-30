@@ -1,0 +1,18 @@
+<div class="panel panel-default">
+    <div class="panel-heading"></div>
+    <div class="panel-body">
+        <div>
+            <select class="dropdown-header"
+                    ng-model="myColor" ng-options="color.text group by type for color in colors track by color.text"
+            ng-change="changeColor()"></select>
+            <span  ng-class="{'visibility_hidden': showed }">{{selected}}</span>
+        </div>
+    </div>
+    <div class="panel-body">
+        <div class="input-group">
+            Filter: <input name="filter" ng-model="filterInput" ><br>
+            Order by: <input name="order" ng-model="orderByInput">
+        </div>
+    </div>
+
+</div>
