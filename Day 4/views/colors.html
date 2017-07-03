@@ -1,18 +1,36 @@
 <div class="panel panel-default">
     <div class="panel-heading"></div>
     <div class="panel-body">
-        <div>
-            <select class="dropdown-header"
+        <div class="col-lg-3 col-sm-offset-4 btn-group">
+            <select class="btn btn-default dropdown-toggle"
                     ng-model="myColor" ng-options="color.text group by type for color in colors track by color.text"
             ng-change="changeColor()"></select>
-            <span  ng-class="{'visibility_hidden': showed }">{{selected}}</span>
-        </div>
-    </div>
-    <div class="panel-body">
-        <div class="input-group">
-            Filter: <input name="filter" ng-model="filterInput" ><br>
-            Order by: <input name="order" ng-model="orderByInput">
-        </div>
-    </div>
 
+        </div>
+        <div class="col-lg-3 col-sm-offset-4 btn-group">
+            <br><h4  ng-class="{'visibility_hidden': showed }">{{selected}}</h4>
+        </div>
+    </div>
+    <hr>
+    <div class="panel-body">
+    <div class="form-horizontal">
+        <div class="form-group">
+            <label for="filterId" class="col-sm-4 control-label">Filter by:</label>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" id="filterId" name="filterBy" ng-model="=filterInput" placeholder="text" >
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="groupId" class="col-sm-4 control-label">Filter by:</label>
+            <div class="col-lg-2">
+                <input type="text" class="form-control" id="groupId" name="groupBy"  ng-model="=groupInput" placeholder="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-5 col-sm-10">
+                <button type="submit" class="btn btn-default">Submit</button>
+            </div>
+        </div>
+    </div>
+    </div>
 </div>

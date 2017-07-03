@@ -1,19 +1,32 @@
-<div>
+<div class="panel panel-default">
     <ng-form name="myForm" class="my-forms" >
-        UserType: <input name="input" ng-model="userType" required>
-        <span class="error" ng-show="myForm.input.$error.required">Required!</span><br><br>
-        userType = {{userType}}<br><br>
-        Properties:<br>
+        <div class="col-lg-offset-3 form-group">
+            UserType:
+            <label for="inputId">UserType:</label>
+            <input id="inputId" name="input" ng-model="userType" required>
+            <span class="error" ng-show="myForm.input.$error.required">Required!</span><br><br>
 
-        <li> myForm.$pristine = {{myForm.$pristine}}</li>
-        <li> myForm.$dirty = {{myForm.$dirty}}</li>
-        <li> myForm.$valid = {{myForm.$valid}}</li>
-        <li> myForm.$invalid = {{myForm.$invalid}}</li>
-        <li> myForm.$error = {{myForm.$error}}</li>
-        <li> myForm.$submitted = {{myForm.$submitted}}</li>
+            <h5>userType = {{userType}}</h5>
+            <div class=col-sm-offset-2>
+                <button class="btn btn-default" role="button" ng-click="validate()">Submit</button>
+                <br>
+                <h3>{{check}}</h3>
+            </div>
+        </div>
 
-        <a class="btn navbar-btn btn-success" role="button" ng-click="validate()">Submit</a><br>
-        {{check}}
+        <hr>
+        <h4>Properties:</h4>
+        <ul class="list-group">
+        <li class="list-group-item"> myForm.$pristine = {{myForm.$pristine}}</li>
+        <li class="list-group-item"> myForm.$dirty = {{myForm.$dirty}}</li>
+        <li class="list-group-item"> myForm.$valid = {{myForm.$valid}}</li>
+        <li class="list-group-item"> myForm.$invalid = {{myForm.$invalid}}</li>
+        <li class="list-group-item"> myForm.$error = {{myForm.$error}}</li>
+        <li class="list-group-item"> myForm.$submitted = {{myForm.$submitted}}</li>
+        </ul>
+
+
+
 
     </ng-form>
 </div>
